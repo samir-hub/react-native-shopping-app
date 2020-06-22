@@ -1,25 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-const ListItem = ({item}) => {
+const ListItem = ({ item }) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.text}>{title}</Text>
-    </View>
+    <TouchableOpacity style={styles.listItem}>
+      <View style={styles.listItemView}>
+        <Text style={styles.listItemText}></Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  header: {
-    height: 60,
-    padding: 15,
-    backgroundColor: "darkslateblue",
-  },
-  text: {
-    color: "#fff",
-    fontSize: 23,
-    textAlign: 'center'
-  },
+  listItem: {},
 });
 
-export default Header;
+export default ListItem;
