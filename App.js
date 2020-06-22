@@ -29,7 +29,7 @@ const App = () => {
       <Header title="Shopping List" />
       <FlatList
         data={items}
-        renderItem={({ item }) => <Text>{item.text}</Text>}
+        renderItem={({ item }) => <ListItem item = {item}/>}
       />
     </View>
   );
