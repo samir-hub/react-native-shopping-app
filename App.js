@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import { StyleSheet, FlatList, View, Text } from "react-native";
 import Header from "./components/Header";
 import ListItem from './components/ListItem';
-import { uuid } from "uuidv4";
 
 const App = () => {
+
+  const genId = () => {
+    return Math.floor(Math.random()*10000000)
+  }
+
   const [items, setItems] = useState([
     {
-      id: uuid(),
+      id: genId(),
       text: "Milk",
     },
     {
-      id: uuid(),
+      id: genId(),
       text: "Cheese",
     },
     {
-      id: uuid(),
+      id: genId(),
       text: "Eggs",
     },
     {
-      id: uuid(),
+      id: genId(),
       text: "Juice",
     },
   ]);
