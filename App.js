@@ -37,6 +37,8 @@ const App = () => {
   const addItem = (item) => {
     if (!item) {
       Alert.alert("Error", "Please enter an item", { text: "Ok" });
+    } else if (items.filter((i) => i.text === item)) {
+      Alert.alert("Error", "Item already exists", { text: "Ok" });
     } else {
       setItems((prevItems) => {
         return [...prevItems, { id: genId(), text: item }];
