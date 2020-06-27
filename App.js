@@ -2,9 +2,12 @@ import "react-native-gesture-handler";
 import React, { useState } from "react";
 import { StyleSheet, FlatList, View, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from '@react-navigation/stack';
 import Header from "./components/Header";
 import ListItem from "./components/ListItem";
 import AddItem from "./components/AddItem";
+
+const Stack = createStackNavigator();
 
 const App = () => {
   const genId = () => {
@@ -52,6 +55,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
+      <Stack.Navigator>
       <View style={styles.container}>
         <Header title="Shopping List" />
         <AddItem addItem={addItem} />
@@ -62,6 +66,7 @@ const App = () => {
           )}
         />
       </View>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
