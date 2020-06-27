@@ -1,5 +1,7 @@
+import "react-native-gesture-handler";
 import React, { useState } from "react";
 import { StyleSheet, FlatList, View, Alert } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 import Header from "./components/Header";
 import ListItem from "./components/ListItem";
 import AddItem from "./components/AddItem";
@@ -49,16 +51,18 @@ const App = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Header title="Shopping List" />
-      <AddItem addItem={addItem} />
-      <FlatList
-        data={items}
-        renderItem={({ item }) => (
-          <ListItem item={item} deleteItem={deleteItem} />
-        )}
-      />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <Header title="Shopping List" />
+        <AddItem addItem={addItem} />
+        <FlatList
+          data={items}
+          renderItem={({ item }) => (
+            <ListItem item={item} deleteItem={deleteItem} />
+          )}
+        />
+      </View>
+    </NavigationContainer>
   );
 };
 
