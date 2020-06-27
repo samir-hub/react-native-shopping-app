@@ -36,7 +36,6 @@ const App = () => {
 
   const addItem = (item) => {
     let found = items.find((element) => element.text === item);
-    console.log(found);
 
     if (!item) {
       Alert.alert("Error", "Please enter an item", { text: "Ok" });
