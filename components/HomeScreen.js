@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet, FlatList, View, Alert } from "react-native";
+import { StyleSheet, FlatList, View, Alert, Button } from "react-native";
 import ListItem from "./ListItem";
 import AddItem from "./AddItem";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const genId = () => {
     return Math.floor(Math.random() * 10000000);
   };
@@ -55,6 +55,10 @@ const HomeScreen = () => {
         renderItem={({ item }) => (
           <ListItem item={item} deleteItem={deleteItem} />
         )}
+      />
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
       />
     </View>
   );
