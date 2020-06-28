@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+    
       <View style={styles.container}>
         <Header title="Shopping List" />
         <AddItem addItem={addItem} />
@@ -66,7 +66,7 @@ const App = () => {
           )}
         />
       </View>
-      </Stack.Navigator>
+      
     </NavigationContainer>
   );
 };

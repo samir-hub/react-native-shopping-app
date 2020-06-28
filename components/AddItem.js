@@ -28,7 +28,7 @@ const AddItem = ({ addItem }) => {
       />
       <TouchableOpacity style={styles.btn} onPress={press}>
         <Text style={styles.btnText}>
-          <Icon name="plus" size={20} /> Add Item
+          <Icon name="plus" size={30} /> Add Item
         </Text>
       </TouchableOpacity>
     </View>
